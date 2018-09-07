@@ -1,6 +1,7 @@
-!   Simple demo of a 2D line plot.
+!   Simple demo of a 2D line plot - build up the line piece by piece
 !
 !   Copyright (C) 2011-2016  Alan W. Irwin
+!   Copyright (C) 2018       Arjen Markus
 !
 !   This file is part of PLplot.
 !

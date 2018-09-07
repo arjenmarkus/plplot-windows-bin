@@ -1,4 +1,4 @@
-!   Simple demo of a 2D line plot.
+!   Simple demo of a 2D line plot - original
 !
 !   Copyright (C) 2011-2016  Alan W. Irwin
 !
@@ -31,16 +31,13 @@
 !
 program x00f
     use plfortrandemolib
-    use ifport
 
-!!  integer, parameter :: pl_test_flt = kind(1.0d0)
     integer, parameter :: NSIZE = 101
 
     real(kind=pl_test_flt), dimension(NSIZE) :: x, y
 
-    real(kind=pl_test_flt) :: param
     real(kind=pl_test_flt) :: xmin = 0._pl_test_flt, xmax = 1._pl_test_flt, ymin = 0._pl_test_flt, ymax = 100._pl_test_flt
-    integer :: i
+    ! integer          :: i
     integer :: plparseopts_rc
 
     ! Prepare data to be plotted.
@@ -65,12 +62,7 @@ program x00f
     call pllab( "x", "y=100 x#u2#d", "Simple PLplot demo of a 2D line plot" )
 
     ! Plot the data that was prepared above.
-    !call plline( x, y )
-
-    do i = 1,NSIZE-1
-        call plline( x(i:i+1), y(i:i+1) )
-        call sleepqq( 100 )
-    enddo
+    call plline( x, y )
 
     ! Close PLplot library
     call plend
